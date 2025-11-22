@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model type="PolyData" version="1.0">
+    <timestep id="0">
+        <model_element type="PolyData" num_sampling="0" use_uniform="0">
+            <segmentations/>
+            <faces>
+                <face id="1" name="inner_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2" name="outer_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2383" name="Aorta_Smoothed_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2404" name="Left_Profunda_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2462" name="Left_Profunda_2_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2511" name="Left_Internal_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2638" name="SMA_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2671" name="Celiac_Hepatic_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="2900" name="Left_Renal_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3007" name="Splenic_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3192" name="Right_Internal_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3267" name="Right_Profunda_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3318" name="Common_External_Femoral_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3342" name="Right_Profunda_2_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3537" name="Right_Renal_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3879" name="Left_Common_Carotid_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3920" name="Brachiocephalic_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="3966" name="inflow_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+                <face id="4016" name="Left_Subclavian_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1"/>
+            </faces>
+            <blend_radii/>
+            <blend_param blend_iters="2" sub_blend_iters="3" cstr_smooth_iters="2" lap_smooth_iters="50" subdivision_iters="1" decimation="0.01"/>
+        </model_element>
+    </timestep>
+</model>

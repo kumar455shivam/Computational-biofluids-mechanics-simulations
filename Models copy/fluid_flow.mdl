@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<model type="PolyData" version="1.0">
+    <timestep id="0">
+        <model_element type="PolyData" num_sampling="0" use_uniform="0">
+            <segmentations />
+            <faces>
+                <face id="6" name="Celiac_Hepatic" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="7" name="inflow" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="8" name="Left_Common_Carotid" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="11" name="Left_Subclavian" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="15" name="Brachiocephalic" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="20" name="Right_Renal" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="21" name="Right_Profunda" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="22" name="Common_External_Femoral" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="23" name="Right_Profunda_2" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="24" name="Right_Internal" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="28" name="Splenic" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="29" name="Left_Renal" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="35" name="SMA" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="39" name="Left_Internal" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="41" name="Left_Profunda" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="42" name="Aorta_Smoothed" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="44" name="Left_Profunda_2" type="cap" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+                <face id="45" name="lumen_wall" type="wall" visible="true" opacity="1" color1="1" color2="1" color3="1" />
+            </faces>
+            <blend_radii />
+            <blend_param blend_iters="2" sub_blend_iters="3" cstr_smooth_iters="2" lap_smooth_iters="50" subdivision_iters="1" decimation="0.01" />
+        </model_element>
+    </timestep>
+</model>

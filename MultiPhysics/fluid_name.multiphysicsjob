@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding=""?>
+<mitk_job model_name="" mesh_name="" status="Creating the solver input XML file ..." process_number="1" version="1.0">
+    <job nsd="3" timeSteps="1000" stepSize="1e-3" continuePrevious="false" restartFileName="results" restartInc="10" vtkSaveResults="false" vtkFileName="results" vtkInc="10" startSavingStep="1" saveAvgResult="true" rhoInf="0.20000000000000001" stopFileName="STOP_SIM" remeshing="false" verbose="true" warn="true" debug="false">
+        <domains>
+            <domain name="flow_fluid-mesh-complete" type="fluid" folder_name="flow_fluid-mesh-complete" file_name="mesh-complete.mesh.vtu" surface_name="mesh-complete.exterior.vtp" face_folder_name="mesh-surfaces">
+                <face name="Aorta_Smoothed"/>
+                <face name="Brachiocephalic"/>
+                <face name="Celiac_Hepatic"/>
+                <face name="Common_External_Femoral"/>
+                <face name="inflow"/>
+                <face name="Left_Common_Carotid"/>
+                <face name="Left_Internal"/>
+                <face name="Left_Profunda"/>
+                <face name="Left_Profunda_2"/>
+                <face name="Left_Renal"/>
+                <face name="Left_Subclavian"/>
+                <face name="Right_Internal"/>
+                <face name="Right_Profunda"/>
+                <face name="Right_Profunda_2"/>
+                <face name="Right_Renal"/>
+                <face name="SMA"/>
+                <face name="Splenic"/>
+                <face name="wall"/>
+            </domain>
+        </domains>
+        <equations>
+            <equation physName="FSI" coupled="true" minItr="1" maxItr="10" tol="1e-4" dBr="-20" backflow="0.29999999999999999">
+                <props>
+                    <prop name="Fluid density" value="1"/>
+                    <prop name="Viscosity" value="0.040000000000000001"/>
+                    <prop name="Solid density" value="1"/>
+                    <prop name="Elasticity modulus" value="100000"/>
+                    <prop name="Poisson ratio" value="0.40000000000000002"/>
+                    <prop name="Constitutive model" value="nHK"/>
+                </props>
+                <linear_solver lsType="GMRES" lsMaxItr="10" lsTol="1e-4" lsNSGMMaxItr="5" lsNSGMTol="1e-4" lsNSCGMaxItr="500" lsNSCGTol="1e-4" lsAbsoluteTol="1e-4" lsKrylovDim="50" lsPreconditioner="Default"/>
+                <outputs>
+                    <spatial>
+                        <output name="Displacement"/>
+                        <output name="Velocity"/>
+                        <output name="Pressure"/>
+                    </spatial>
+                </outputs>
+                <boundary_conditions>
+                    <face name="inflow" group="Dirichlet" type="Unsteady" file="AA_3d_inlet.flow" profile="Parabolic" zperm="true" flux="true" impose_integral="false" effective_direction=""/>
+                </boundary_conditions>
+            </equation>
+            <equation physName="mesh" coupled="true" minItr="1" maxItr="10" tol="1e-4" dBr="-20" backflow="0.29999999999999999">
+                <props>
+                    <prop name="Poisson ratio" value="0.29999999999999999"/>
+                </props>
+                <linear_solver lsType="GMRES" lsMaxItr="10" lsTol="1e-4" lsNSGMMaxItr="5" lsNSGMTol="1e-4" lsNSCGMaxItr="500" lsNSCGTol="1e-4" lsAbsoluteTol="1e-4" lsKrylovDim="50" lsPreconditioner="Default"/>
+                <outputs>
+                    <spatial>
+                        <output name="Displacement"/>
+                    </spatial>
+                </outputs>
+                <boundary_conditions/>
+            </equation>
+        </equations>
+    </job>
+</mitk_job>
